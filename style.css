@@ -1,0 +1,193 @@
+/*
+    
+    put title and about me in nav
+    green = 319b00
+    dark blue = 00bbff8e
+    blue = 00bbff
+    
+*/
+
+:root{    
+    --background-color: #bbb;
+    --foreground-color: #111;
+
+    --title-font-color: #00799e;
+    --subtitle-font-color: #319b00;
+    --paragraph-font-color: #0085b6;
+    
+
+    --nav-background-color: #111;
+    --nav-link-color: #bbb;
+    --nav-hover-color: #111; 
+    --nav-hover-bkgd-color: #bbb;
+
+    --link-inactive-color: #00bbff;
+    --link-hover-color: #fff;
+
+}
+
+*{
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.618em;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 16px;
+    margin-top: 3em;
+    background-color: var(--background-color);
+    color: var(--paragraph-font-color);
+    
+}
+
+h1, h2, h3{
+    color: var(--foreground-color);
+    
+}
+
+h1{
+    color: var(--title-font-color);
+    font-family: 'Montserrat', sans-serif;
+    padding: 1em 1em;
+}
+
+
+header, main, footer{
+    margin: 3em auto;
+    max-width: 1000px;
+}
+
+header, footer{    
+    background: var(--foreground-color);
+    border-radius: 1em;
+}
+/*
+header{
+    padding: 3em 2em;
+    
+}
+*/
+header h1{
+    font-size: 3em;
+    
+}
+
+header span{
+    font-size: 1.5em;
+    color: var(--subtitle-font-color);
+    padding: 0 2em;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: right;
+    background: var(--nav-background-color);
+    align-items: flex-end;
+    
+}
+
+nav a{
+    margin: 1em 1em;
+    padding: 0 1em;
+    color: var(--nav-link-color);
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+nav a:hover{
+    color: var(--nav-hover-color);
+    background-color: var(--nav-hover-bkgd-color);
+    border-radius: 5px;
+}
+
+section{
+    margin: 1em 0;
+    /* this adjusts where id links line up */
+    padding-top: 2em;
+    min-height: 20em;
+    background: var(--foreground-color);
+    border-radius: 1em;
+}
+
+#aboutMe, #contactInfo, #myProjects{
+    min-height: 0;
+    height: 3em;
+    background-color: var(--background-color);
+    
+}
+
+section h2{
+    display: grid;
+    margin: 0 auto;
+    width: 20%;    
+    justify-content: center;
+    background-color: var(--title-font-color);
+    border-radius: 25px;
+}
+
+section > p {
+    margin: 1em 2em;
+}
+
+section ul{
+    padding-left: 1.5em;
+}
+
+#projects{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1em;
+    padding-bottom: 2em;
+    padding-right: 1em;
+    padding-left: 1em;
+    
+}
+
+#projects article{
+    background: var(--title-font-color);
+    color: var(--background-color);
+    padding: 1em;
+    border-radius: 5%;
+}
+
+#projects article img{
+    background: var(--foreground-color);
+    width: 100%;
+    height: 50%;
+    border: 1px solid var(--background-color);
+}
+
+
+
+footer{
+    margin-top: 2em;
+    margin-bottom: 1em;
+    background: var(--foreground-color);
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    font: "Roboto";
+}
+
+footer #we{
+    color: #e7276f;
+}
+
+footer #can{
+    color: #009726;
+}
+
+footer #code{
+    color: #0081bd;
+}
+
+footer #it{
+    color: #f76c2c;
+}
