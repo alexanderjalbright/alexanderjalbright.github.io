@@ -107,9 +107,9 @@ nav{
     flex-flow: row;
     justify-content: center;
     background: var(--nav-background-color);
-    align-items: flex-end;
     border-color: #00bbff;
     border-width: 10px;
+    
     
 }
 
@@ -122,6 +122,16 @@ nav a{
     border-radius: 5px;
     border: 1px solid var(--background-color);
    
+}
+
+nav h2{
+    margin: 0.5em 1em;
+    padding: 0 1em;
+    color: var(--title-font-color);
+    font-size: 2em;
+    font-family: 'Pacifico', cursive;
+    flex-grow: 5;
+
 }
 
 nav a:hover{
@@ -163,12 +173,15 @@ section h2{
 }
 
 #me img{
-    width: 200px;
+    height: 300px;
     border-radius: 5px;
     margin: 0 2em 2em;
 }
 
-
+p{
+    
+    font-size: 1.3em;
+}
 section > p {
     margin: 1em 2em;
 }
@@ -195,7 +208,7 @@ section ul{
 
 #projects article{
     background: var(--title-font-color);
-    color: var(--background-color);
+    color: var(--foreground-color);
     padding: 1em;
     border-radius: 5%;
 }
@@ -206,7 +219,11 @@ section ul{
     height: 50%;
     border: 1px solid var(--background-color);
 }
-
+#projects article h3{
+    display:grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+}
 
 
 footer{
