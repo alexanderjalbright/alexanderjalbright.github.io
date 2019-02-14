@@ -71,7 +71,7 @@ h1{
 
 header, main, footer{
     margin: 3em auto;
-    max-width: 1000px;
+    max-width: 80vw;
 }
 
 header, footer{    
@@ -112,6 +112,15 @@ nav{
     
     
 }
+nav h2{
+    margin: 0.5em 1em;
+    padding: 0 1em;
+    color: var(--title-font-color);
+    font-size: 2em;
+    font-family: 'Pacifico', cursive;
+    flex-grow: 5;
+
+}
 
 nav a{
     margin: 1em 1em;
@@ -122,16 +131,6 @@ nav a{
     border-radius: 5px;
     border: 1px solid var(--background-color);
    
-}
-
-nav h2{
-    margin: 0.5em 1em;
-    padding: 0 1em;
-    color: var(--title-font-color);
-    font-size: 2em;
-    font-family: 'Pacifico', cursive;
-    flex-grow: 5;
-
 }
 
 nav a:hover{
