@@ -1,32 +1,7 @@
-/*
-    
-    put title and about me in nav
-    green = 319b00
-    dark blue = 00bbff8e
-    blue = 00bbff
-    
-*/
-
 :root{    
-    --background-color: #ddd;
-    --foreground-color: #222;
-/*
-    --title-font-color: #0085b6;
-    --subtitle-font-color: #005777;
-    --paragraph-font-color: #0085b6;
-    */
-    --title-font-color: #00bbff;
-    --subtitle-font-color: #00bbff;
-    --paragraph-font-color: #00bbff;
-
-    --nav-background-color: #222;
-    --nav-link-color: #ddd;
-    --nav-hover-color: #222; 
-    --nav-hover-bkgd-color: #ddd;
-
-    --link-color: #ddd;
-    --link-inactive-color: #00bbff;
-    --link-hover-color: #00bbff;
+    --background-color: #ffffff;
+    --foreground-color: #333;
+    --font-color: #00bbff;
 
 }
 
@@ -41,37 +16,48 @@
 
 html{
     font-size: 16px;
-    margin-top: 3em;
+    margin-top: 1em;
     background-color: var(--background-color);
-    color: var(--paragraph-font-color);
+    color: var(--background-color);
+    
     
 }
 
 a{
-    color: var(--link-color);
+    color: var(--background-color);
     text-decoration: none;
+    padding: 0 .5em;
+    border-radius: 5px;
+    border: 1px solid var(--background-color);
 }
 
 a:hover{
-    color: var(--link-hover-color);
-    
+    color: var(--font-color);    
     font-style: bold;
-}
-
-h1, h2, h3{
     color: var(--foreground-color);
-    
+    background-color: var(--background-color);
+    transition:  0.3s ease;
 }
 
 h1{
-    color: var(--title-font-color);
+    color: var(--font-color);
     padding: 1em 1em;
+}
+
+h2, h3{
+    color: var(--foreground-color);    
+}
+
+h2{
+    transform: scale(var(--section-h2-scale));
+    transition: 0.3s ease;
 }
 
 
 header, main, footer{
     margin: 3em auto;
-    max-width: 80vw;
+    max-width: 75vw;
+    min-width: 800px;
 }
 
 header, footer{    
@@ -93,7 +79,7 @@ header h1{
 
 header span{
     font-size: 1.5em;
-    color: var(--subtitle-font-color);
+    color: var(--font-color);
     padding: 0 2em;
     margin: auto auto 3em;
 }
@@ -102,43 +88,94 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 45px;
+    height: 100vh;
     display: flex;
-    flex-flow: row;
-    justify-content: center;
-    background: var(--nav-background-color);
-    border-color: #00bbff;
-    border-width: 10px;
+    flex-flow: column;
+    white-space: nowrap;
     
+    background: var(--foreground-color);
+    --nav-name-size: 0.3;
     
+    --nav-name-font-size: 1em;
+    --nav-a-opacity: 1;
+    --nav-name-pos: 0.5vw;
+    --nav-a-width: 27px;
+    --nav-a-margin-left: 0.8em;
+    --nav-a-color: #00000000;
+    --nav-span-opacity: 0;
+    --nav-span-visibility: hidden;
+    --nav-a-pad-left: 0.5em;
+    --h2-spaces-shrink: 0px;
+    transition: all 0.3s ease;
 }
-nav h2{
-    margin: 0.5em 1em;
-    padding: 0 1em;
-    color: var(--title-font-color);
-    font-size: 2em;
-    font-family: 'Pacifico', cursive;
-    flex-grow: 5;
 
+nav:hover{
+    width: 135px;
+    --nav-name-size: 1;
+    --nav-name-font-size: 2em;
+    --nav-a-opacity: 1;
+    --nav-name-pos: 3vw;
+    --nav-a-width: 8vw;
+    --nav-a-margin-left: 0.5em;
+    --nav-a-color: var(--background-color);
+    --nav-span-opacity: 1;
+    --nav-span-visibility: visible;
+    --h2-spaces-shrink: 1em;
+    --nav-a-pad-left: 1.7em;
 }
+nav div{
+    flex-grow: 1;
+}
+
+nav h2{    
+    
+    margin: 1em 0 1em var(--nav-name-pos);
+    color: var(--font-color);
+    /* transform: rotate(90deg); */
+    writing-mode: sideways-lr;
+    font-size: var(--nav-name-font-size);
+    /* transform: scale(var(--nav-name-size)); */
+    transition: 0.3s ease;
+}
+h2 > span{
+    font-size: var(--h2-spaces-shrink);
+    color: var(--foreground-color);
+    transition: 0.3s ease;
+}
+
 
 nav a{
-    margin: 1em 1em;
-    padding: 0 1em;
-    color: var(--nav-link-color);
-    font-size: 1.5em;
+    margin: 1em 0 1em var(--nav-a-margin-left);
+    padding-top: 0.3em;
+    padding-left: var(--nav-a-pad-left);
+    font-size: 14px;
+    height: 30px;
+    width: var(--nav-a-width);
     text-decoration: none;
-    border-radius: 5px;
-    border: 1px solid var(--background-color);
-   
+    
+    opacity: var(--nav-a-opacity);
+    --nav-span-color: var(--background-color);
+    transition:  0.3s ease;
+    
 }
 
 nav a:hover{
-    color: var(--nav-hover-color);
-    background-color: var(--nav-hover-bkgd-color);
-    border-radius: 5px;
-    
+    --nav-span-color: var(--foreground-color);  
 }
+
+nav a span{
+    
+    height: 30px;
+    
+    color: var(--nav-span-color);
+    font-size: var(--h2-spaces-shrink);
+    transition: 0.3s ease-out;
+}
+
+
+
+
 
 section{
     margin: 1em 0;
@@ -147,11 +184,16 @@ section{
     min-height: 20em;
     background: var(--foreground-color);
     border-radius: 1em;
+    --section-h2-scale: 1;
+}
+
+section:hover{
+    --section-h2-scale: 1.3;
 }
 
 #aboutMe, #contactInfo, #myProjects{
     min-height: 0;
-    height: 3em;
+    height: 1em;
     background-color: var(--background-color);
     
 }
@@ -206,10 +248,15 @@ section ul{
 }
 
 #projects article{
-    background: var(--title-font-color);
-    color: var(--foreground-color);
+    color: var(--background-color);
     padding: 1em;
     border-radius: 5%;
+    transition: 0.3s ease;
+}
+
+#projects article:hover{
+    transform: scale(1.2, 1.2);
+    transition: 0.3s ease;
 }
 
 #projects article img{
@@ -222,6 +269,7 @@ section ul{
     display:grid;
     grid-template-rows: 1fr;
     justify-content: center;
+    color: var(--background-color);
 }
 
 
