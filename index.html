@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />     
         <link rel="stylesheet" href="./style.css" />
         <link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway" rel="stylesheet">  
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     </head>  
     <body>        
         <nav>
@@ -64,23 +65,25 @@
         <main>
                 <section class="card aboutMe">
                         <span id="aboutMe" class="jumpTo"></span>
-                        <div class="column headShot">
+                        <div class="column leftColumn headShot">
                             <img src="./images/HeadShot.jpg"/>
                         </div>
                         <div class="column spacer"> 
-                            <a>&#9634;</a>
-                           about me
-                            <a href="#myProjects">&#9661;</a>
+                            <a class="arrow endArrow">&#9634;</a>
+                                about me
+                            <a class="arrow" href="#myProjects">&#9661;</a>
                         </div>
-                        <div class="column">
+                        <div class="column rightColumn">
                             <article>
                                 An aspiring software engineer that has dabbled in several coding fields. A passion for coding utilizes strengths in problem solving, capacity for understanding logic and associated tools, impregnable devotion to learning new concepts, and fondness for technology. 
+                                <br><br>"<span class="quote">A foolish consistency is the hobgoblin of feeble minds</span>"
+                                <br><span class="quotee">-Ralph Waldo Emerson</span>
                             </article>
                         </div>
                 </section>
                 <section class="card myProjects">
                         <span id="myProjects" class="jumpTo"></span>
-                        <div class="column projectPic"> 
+                        <div class="column leftColumn projectPic"> 
                             <a href="https://github.com/MaryMcGeary/VirtualPetsAmok" target="_blank">
                                 <img src="./images/VPA.png"/>
                             </a>
@@ -92,11 +95,11 @@
                             </a>
                         </div>
                         <div class="column spacer"> 
-                            <a href="#aboutMe">&#9651;</a>
+                            <a class="arrow" href="#aboutMe">&#9651;</a>
                             my projects
-                            <a href="#contactMe">&#9661;</a>
+                            <a class="arrow" href="#contactMe">&#9661;</a>
                         </div>
-                        <div class="column projDesc"> 
+                        <div class="column rightColumn projDesc"> 
                             <article>
                                 <h2>Vitual Pets Amok</h2>
                                 <p>
@@ -123,6 +126,30 @@
                             
                         </div>
                 </section>
+                <section class="card contactMe">
+                    <span id="contactMe" class="jumpTo"></span>
+                    <div class="column leftColumn contact">
+                        <a class="fontAwesome" href="mailto:alexanderjalbright@gmail.com" target="_blank"><i class="fas fa-at fa-6x"></i></a>
+                        <a class="fontAwesome" href="https://www.linkedin.com/in/alexanderjalbright/" target="_blank"><i class="fab fa-linkedin-in fa-6x"></i></a>
+                        <a class="fontAwesome" href="https://github.com/alexanderjalbright" target="_blank"><i class="fab fa-github fa-6x"></i></a>
+                    </div>
+                    <div class="column spacer"> 
+                        <a class="arrow" href="#myProjects">&#9651;</a>
+                            contact me
+                        <a class="arrow endArrow">&#9634;</a>
+                    </div>
+                    <div class="column rightColumn contact">
+                        <article>
+                            alexanderjalbright@gmail.com 
+                        </article>
+                        <article>
+                            linkedin.com/in/alexanderjalbright 
+                        </article>
+                        <article>
+                            github.com/alexanderjalbright
+                        </article>
+                    </div>
+            </section>
         </main>
     </body>
 </html>

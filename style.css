@@ -22,7 +22,8 @@ html{
 main{
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center; 
+      
 }
 
 .jumpTo{
@@ -38,6 +39,12 @@ main{
 }
 
 /* ******** About Me ******** */
+
+.headShot img{
+    height: 70vh;
+    margin-right: 4vw;
+    align-self: flex-end;
+}
 
 /* ******** My Projects ******** */
 
@@ -57,7 +64,7 @@ main{
     
     height: 89vh;    
     width: 45vw;
-    margin: 0 1vw 0 0;
+    margin: 0 0.8vw 0 0;
 }
 
 .spacer{
@@ -74,11 +81,15 @@ main{
     left:50vw;
 }
 
-.spacer a{
+.arrow{
     writing-mode: horizontal-tb;
     text-decoration: none;
     font-size: 1.5em;
     background-color: var(--background-color);
+}
+
+.endArrow{
+    color: var(--background-color);
 }
 
 .spacer a:visited{
@@ -93,7 +104,9 @@ main{
 .projectPic img{
     height: 25vh;
     width: 25vw;
-    margin: 0 0 0 15vw;
+    align-self: flex-start;
+    margin-right: 4vw;
+    z-index: 5;
     transition: 0.2s ease;
 }
 
@@ -103,16 +116,42 @@ main{
     
 }
 
-.column article{
+.rightColumn article{
     margin: 0 3vw;
     max-width: 25vw;
     align-self: flex-start;
     font-size: 24px;
 }
 
-.projDesc p, h2{
-    margin: 0 4.5vw;
+.quote{
+    font-size: 18px;
+    font-style: italic;
 }
+
+.quotee{
+    font-size: 18px;
+}
+.projDesc p, h2{
+    margin: 0 2.5vw;
+}
+
+/* ******** Contact Me ******** */
+
+.fontAwesome{
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.contact a{
+    align-self: flex-end;
+    margin-right: 4vw;
+}
+
+.contact article{
+    margin-left: 8vw;
+}
+
+
 
 /* ******** NAVBAR ******** */
 nav{
