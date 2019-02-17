@@ -1,72 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-    <title>Alexander Albright</title>
+    <title>Portfolio - Alex Albright</title>
     <head>    
         <meta charset="UTF-8" />    
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />     
         <link rel="stylesheet" href="./style.css" />
         <link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway" rel="stylesheet">  
     </head>  
-    <body>
-        <header class="card">
-            <h1> Alexander Albright</h1>
-            <span>C# | .NET | CSS | HTML</span>
-        </header>
+    <body>        
+        <nav>
+            <section class="name">alexander<span>&nbsp;&nbsp;</span>j<span>&nbsp;&nbsp;</span>albright</section>
+            <section class="filler">C#&nbsp;|&nbsp;.NET&nbsp;|&nbsp;CSS&nbsp;|&nbsp;HTML</section>
+            <section class="filler">full stack junior software developer</section>
+            <section class="dropdown dropdown1">
+                <div class="menu label">
+                   profiles
+                </div >
+                <a class="menu choice choice1" href="https://www.linkedin.com/in/alexanderjalbright/" target="_blank">
+                    <div >
+                        LinkedIn
+                    </div>
+                </a>
+                <a class="menu choice choice2 bottom" href="https://github.com/alexanderjalbright" target="_blank">
+                    <div >
+                        GitHub
+                    </div>
+                </a>                
+            </section> 
+
+            <section class="dropdown dropdown3">                    
+                <div class="menu label">
+                    blog
+                </div >
+                <!-- <a  href="#blog"> -->
+                    <div class="menu choice choice1 bottom">
+                        soming soon
+                    </div>
+                <!-- </a> -->       
+            </section> 
+
+            <section class="dropdown dropdown2">                    
+                <div class="menu label">
+                   section
+                </div >
+                <a class="menu choice choice1" href="#aboutMe">
+                    <div >
+                        about me
+                    </div>
+                </a>
+                <a class="menu choice choice2" href="#myProjects">
+                    <div >
+                        projects
+                    </div>
+                </a>
+                <a class="menu choice choice3 bottom" href="#contactMe">
+                    <div >
+                        contact me
+                    </div>
+                </a>                
+            </section>             
+        </nav>
 
         <main>
-            <section id="aboutMe"></section>
-            <section class="card">
-                <h2>About Me</h2>
-                <div id="me">
-                    <img src="./images/HeadShot.jpg">
-                    <p>An aspiring software engineer that has dabbled in several coding fields. A passion for coding utilizes strengths in problem solving, capacity for understanding logic and associated tools, impregnable devotion to learning new concepts, and fondness for technology.</p>
-                </div>
-            </section>
-            <section id="myProjects"></section>
-            <section class="card">
-                <h2>My Projects</h2>
-                <p>These projects were created while engaged in a full-time, 5-star-rated coding bootcamp, learning agile full-stack software development from expert instructors and intensive hands-on projects. Each were planned, designed, and developed professionally in collaborative team-based and independent settings, demonstrating the proficiency to earn Software Development Certificate.</p>
-                <div id="projects">
-                    <article>
-                        <h3>Virtual Pets Amok</h3>
-                        <a href="https://github.com/MaryMcGeary/VirtualPetsAmok" target="_blank"><img src="./images/VPA.png"/></a>
-                        <p>A C# console app designed to allow the user to assume the role of the owner of a pet shelter.</p>
-                    </article>
-                    <article>
-                        <h3>University Hospital Clinic</h3>
-                        <a href="https://github.com/alexanderjalbright/UniversityClinicHospital" target="_blank"><img src="./images/CSharpMastery.png"/></a>
-                        <p>UHC is designed to illustrate all the various coding techniques developed during my first few weeks at bootcamp. <br>Skills: C#</p>
-                    </article>
-                    <article>
-                        <h3>Code Business</h3>
-                        <a href="https://github.com/alexanderjalbright/UniversityClinicHospital" target="_blank"><img src="./images/CodeBusiness.png"/></a>
-                        <p>Created first website following youtube video created by an instructor of WeCanCodeIT. <br>Skills: HTML/CSS</p>
-                    </article>
-                </div>
-            </section>
-            <section id="contactInfo"></section>
-            <section class="card">
-                <h2>Contact Info</h2>
-                <p>Feel free to contact me on any platform you see fit.</p>
-                <ul>
-                    <li>Email: alexanderjalbright@gmail.com</li>
-                    <li>LinkedIn: <a class="link" href="https://www.linkedin.com/in/alexanderjalbright/" target="_blank">alexanderjalbright</a></li>
-                    <li>GitHub: <a class="link" href="https://github.com/alexanderjalbright" target="_blank">alexanderjalbright</a></li>
+                <section class="card aboutMe">
+                        <span id="aboutMe" class="jumpTo"></span>
+                        <div class="column headShot">
+                            <img src="./images/HeadShot.jpg"/>
+                        </div>
+                        <div class="column spacer"> 
+                            <a>&#9634;</a>
+                           about me
+                            <a href="#myProjects">&#9661;</a>
+                        </div>
+                        <div class="column">
+                            <article>
+                                An aspiring software engineer that has dabbled in several coding fields. A passion for coding utilizes strengths in problem solving, capacity for understanding logic and associated tools, impregnable devotion to learning new concepts, and fondness for technology. 
+                            </article>
+                        </div>
+                </section>
+                <section class="card myProjects">
+                        <span id="myProjects" class="jumpTo"></span>
+                        <div class="column projectPic"> 
+                            <a href="https://github.com/MaryMcGeary/VirtualPetsAmok" target="_blank">
+                                <img src="./images/VPA.png"/>
+                            </a>
+                            <a href="https://github.com/alexanderjalbright/UniversityClinicHospital" target="_blank">
+                                <img src="./images/CSharpMastery.png"/>
+                            </a>
+                            <a href="https://github.com/alexanderjalbright/CSSPractice/tree/master/FlexExercise" target="_blank">
+                                <img src="./images/CodeBusiness.png"/>
+                            </a>
+                        </div>
+                        <div class="column spacer"> 
+                            <a href="#aboutMe">&#9651;</a>
+                            my projects
+                            <a href="#contactMe">&#9661;</a>
+                        </div>
+                        <div class="column projDesc"> 
+                            <article>
+                                <h2>Vitual Pets Amok</h2>
+                                <p>
+                                    A C# console app designed to allow the user to assume the role of the owner of a pet shelter.
+                                    <br><br>Skills: C#
+                                </p>
 
+                            </article>
+                            <article>
+                                <h2>University Hospital Clinic</h2>
+                                <p>
+                                    UHC is designed to illustrate all the various coding techniques developed during my first few weeks at bootcamp.
+                                    <br><br>Skills: C#
+                                </p>
+                            </article>
+                            <article>
+                                <h2>Code Business</h2>
+                                <p>
+                                    Created first website following youtube video created by an instructor of WeCanCodeIT.
+                                    <br><br>Skills: CSS/HTML
+                                </p>
 
-                </ul>
-            </section>
+                            </article>
+                            
+                        </div>
+                </section>
         </main>
-        <nav>
-            <div>
-                <h2>alexander<span id="spaces">&nbsp;</span>j<span id="spaces">&nbsp;</span>albright</h2>
-            </div>
-            <a class="link" href="#aboutMe">A<span>bout Me</span></a>
-            <a class="link" href="#myProjects">M<span>y Projects</span></a>
-            <a class="link" href="#contactInfo">C<span>ontact Info</span></a>            
-        </nav>
-        <footer class="card">
-            &copy; 2019 <span id="we">We</span><span id="can">Can</span><span id="code">{Code}</span><span id="it">IT</span>
-        </footer>
     </body>
 </html>
