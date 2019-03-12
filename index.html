@@ -7,12 +7,20 @@
         <link rel="stylesheet" href="./style.css" />
         <link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway" rel="stylesheet">  
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     </head>  
     <body>        
         <nav>
             <section class="name">alexander<span>&nbsp;&nbsp;</span>j<span>&nbsp;&nbsp;</span>albright</section>
-            <section class="filler">C#&nbsp;|&nbsp;.NET&nbsp;|&nbsp;CSS&nbsp;|&nbsp;HTML</section>
-            <section class="filler">full stack junior software developer</section>
+            <section class="filler">
+                <i class="devicon-csharp-plain">&nbsp;|&nbsp;</i>
+                <i class="devicon-c-plain">&nbsp;|&nbsp;</i>    
+                <i class="devicon-cplusplus-plain">&nbsp;|&nbsp;</i>              
+                <i class="devicon-dot-net-plain">&nbsp;|&nbsp;</i>
+                <i class="devicon-css3-plain">&nbsp;|&nbsp;</i>
+                <i class="devicon-html5-plain"></i>
+            </section>
+            <section class="filler">junior software developer</section>
             <section class="dropdown dropdown1">
                 <div class="menu label">
                    profiles
@@ -34,7 +42,7 @@
                     blog
                 </div >
                 <!-- <a  href="#blog"> -->
-                    <div class="menu choice choice1 bottom">
+                    <div class="menu choice choice1 bottom" style="font-size: 90%;">
                         coming soon
                     </div>
                 <!-- </a> -->       
@@ -62,28 +70,29 @@
             </section>             
         </nav>
 
-        <main>
-                <section class="card aboutMe">
+        <main>               
+                <section class="card topCard">
                         <span id="aboutMe" class="jumpTo"></span>
-                        <div class="column leftColumn headShot">
-                            <img src="./images/HeadShot.jpg"/>
+                        <div class="column leftColumn">
+                                <img class="headShot" src="./images/HeadShot.jpg"/>
                         </div>
-                        <div class="column spacer"> 
+                        <div class="spacer"> 
                             <a class="arrow endArrow">&#9634;</a>
-                                about me
+                                <h2 class="topSpacer">about me</h2>
                             <a class="arrow" href="#myProjects">&#9661;</a>
                         </div>
-                        <div class="column rightColumn aboutMe">
+                        <div class="column rightColumn">
                             <article>
-                                An aspiring software engineer that has dabbled in several coding fields. A passion for coding utilizes strengths in problem solving, capacity for understanding logic and associated tools, impregnable devotion to learning new concepts, and fondness for technology. 
-                                <br><br>"<span class="quote">A foolish consistency is the hobgoblin of feeble minds</span>"
-                                <br><span class="quotee">-Ralph Waldo Emerson</span>
+                                    <h1>Alex Albright</h1>
+                                    <br>An aspiring software engineer that has dabbled in several coding fields. A passion for coding utilizes strengths in problem solving, capacity for understanding logic and associated tools, impregnable devotion to learning new concepts, and fondness for technology. 
+                                <br><br><span class="quote">"A foolish consistency is the hobgoblin of feeble minds"</span>
+                                <br>~<span class="quotee">Ralph Waldo Emerson</span>
                             </article>
                         </div>
                 </section>
                 <section class="card myProjects">
                         <span id="myProjects" class="jumpTo"></span>
-                        <div class="column leftColumn projectPic"> 
+                        <div class="column leftColumn"> 
                             <a href="https://github.com/MaryMcGeary/VirtualPetsAmok" target="_blank">
                                 <img src="./images/VPA.png"/>
                             </a>
@@ -94,12 +103,12 @@
                                 <img src="./images/CodeBusiness.png"/>
                             </a>
                         </div>
-                        <div class="column spacer"> 
+                        <div class="spacer"> 
                             <a class="arrow" href="#aboutMe">&#9651;</a>
-                            my projects
+                            <h2>my projects</h2>
                             <a class="arrow" href="#contactMe">&#9661;</a>
                         </div>
-                        <div class="column rightColumn projDesc"> 
+                        <div class="column rightColumn"> 
                             <article>
                                 <h2>Vitual Pets Amok</h2>
                                 <p>
@@ -126,27 +135,33 @@
                             
                         </div>
                 </section>
-                <section class="card contactMe">
+                <section class="card">
                     <span id="contactMe" class="jumpTo"></span>
-                    <div class="column leftColumn contact">
-                        <a class="fontAwesome" href="mailto:alexanderjalbright@gmail.com" target="_blank"><i class="fas fa-at fa-6x"></i></a>
-                        <a class="fontAwesome" href="https://www.linkedin.com/in/alexanderjalbright/" target="_blank"><i class="fab fa-linkedin-in fa-6x"></i></a>
-                        <a class="fontAwesome" href="https://github.com/alexanderjalbright" target="_blank"><i class="fab fa-github fa-6x"></i></a>
+                    <div class="column leftColumn fontAwesome">
+                        <div>
+                            <a href="mailto:alexanderjalbright@gmail.com" target="_blank"><i class="fas fa-at fa-6x"></i></a>
+                        </div>
+                        <div>
+                            <a href="https://www.linkedin.com/in/alexanderjalbright/" target="_blank"><i class="fab fa-linkedin-in fa-6x"></i></a>
+                        </div>
+                        <div>
+                            <a href="https://github.com/alexanderjalbright" target="_blank"><i class="fab fa-github fa-6x"></i></a>
+                        </div>
                     </div>
-                    <div class="column spacer"> 
+                    <div class="spacer"> 
                         <a class="arrow" href="#myProjects">&#9651;</a>
-                            contact me
+                            <h2 class="bottomSpacer">contact me</h2>
                         <a class="arrow endArrow">&#9634;</a>
                     </div>
-                    <div class="column rightColumn contact">
+                    <div class="column rightColumn contactMe">
                         <article>
-                            alexanderjalbright@gmail.com 
+                            <p>alexanderjalbright@gmail.com</p>
                         </article>
                         <article>
-                            linkedin.com/in/alexanderjalbright 
+                            <p>linkedin.com/in/alexanderjalbright</p>
                         </article>
                         <article>
-                            github.com/alexanderjalbright
+                            <p>github.com/alexanderjalbright</p>
                         </article>
                     </div>
             </section>

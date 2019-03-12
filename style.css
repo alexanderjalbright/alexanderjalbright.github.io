@@ -3,6 +3,7 @@
     --foreground-color: #333;
     --accent-color: #00bbff;
     --dd-border-radius: 15px;
+    --spacer-border-radius: 10px;
 }
 
 *{
@@ -16,6 +17,32 @@
 
 html{
     scroll-behavior: smooth;
+    background-color: var(--background-color);
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    color: var(--accent-color);
+    font-size: 3em;
+}
+
+a > img:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 3px var(--accent-color);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+article{
+    width: 400px;
+    padding: 1em 0;
 }
 
 /* ******** NAVBAR ******** */
@@ -23,18 +50,14 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
-    height: 6vh;    
+    height: 45px;    
     width: 100vw;
     background-color: var(--foreground-color);
-    z-index: 20;
+    z-index: 10;
     display: flex;
     justify-content: flex-end;
     
     box-shadow: 0px 8px 10px 3px var(--foreground-color);
-}
-
-nav a{
-    text-decoration: none;
 }
 
 .name{
@@ -60,7 +83,14 @@ nav a{
     color: var(--accent-color);
     text-align: center;
     align-self: center;
+    color: var(--accent-color);
+    
 }
+
+.filler i{
+    font-size: 26px;
+}
+
 
 .dropdown{
     margin: 0;
@@ -80,7 +110,7 @@ nav a{
     --choice3-pos: 0px;
     transition: 0.3s ease;
 }
-.dropdown div, a{    
+.dropdown div, .dropdown a{    
     width: 7vw;
     height: 6vh;
     display: flex;
@@ -90,8 +120,6 @@ nav a{
     transition: 0.3s ease;
     
 }
-
-
 
 .label{    
     position: relative;
@@ -143,147 +171,148 @@ nav a{
 }
 
 /* ******** Main Page ******** */
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-      
-}
+
 
 .jumpTo{
     position: relative;
     top: -52vh;
+    visibility: hidden;
 }
 
 .card{
-    margin: 6vh 0;
-    padding: 4em;
     height: 94vh;
     width: 100vw;
-}
-
-/* ******** About Me ******** */
-
-.headShot{
-    width: 50vw;
-}
-
-.headShot img{
-    height: 70vh;
-    margin-right: 7vw;
-    align-self: flex-end;
-}
-
-.aboutMe article{
-    padding-left: 4vw;
-}
-
-
-.quote{
-    font-size: 18px;
-    font-style: italic;
-}
-
-.quotee{
-    font-size: 16px;
-}
-
-/* ******** My Projects ******** */
-
-.card{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    
+    
 }
 
 .column{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    
-    height: 89vh;    
-    width: 45vw;
-    margin-right: 0.8vw;
+    flex: 1;
+}
+
+.leftColumn{
+    align-items: flex-end;
+}
+
+.rightColumn{
+    align-items: flex-start;   
 }
 
 .spacer{
-    width: 3vw;
-    background-color: var(--foreground-color);
-    writing-mode: sideways-lr;
+    width: 150px;
+    flex-grow: 0;
     color: var(--accent-color);
     font-size: 1.8em;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    height: 90%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    position: absolute;
-    left:48vw;
+    
 }
 
+.topSpacer{
+    border-top-left-radius: var(--spacer-border-radius);
+    border-top-right-radius: var(--spacer-border-radius);
+}
+
+.bottomSpacer{
+    border-bottom-left-radius: var(--spacer-border-radius);
+    border-bottom-right-radius: var(--spacer-border-radius);
+}
+
+.spacer h2{
+    background-color: var(--foreground-color);
+    writing-mode: sideways-lr;
+    flex-grow: 1;
+    text-align: center;
+}
+.spacer a:visited{
+    color: var(--accent-color);  
+
+}
+
+
 .arrow{
-    writing-mode: horizontal-tb;
-    text-decoration: none;
-    font-size: 1.5em;
-    background-color: var(--background-color);
+    font-size: 1em;
+    font-weight: bold;
 }
 
 .endArrow{
-    color: var(--background-color);
+    opacity:0;
 }
 
-.spacer a:visited{
-    color: var(--accent-color);
-    
+
+
+/* ******** About Me ******** */
+
+.topCard{
+    margin-top: 6vh;
 }
 
-.projectPic img{
+.headShot{
+    height: 70vh;
+}
+
+.quote{
+    font-style: italic;
+}
+
+.quotee{
+    font-weight: bold;
+}
+
+
+/* ******** My Projects ******** */
+  
+
+ .myProjects img{
     height: 25vh;
     width: 25vw;
     align-self: center;
-    margin-left: 6vw;
-    z-index: 5;
     transition: 0.2s ease;
-}
+} 
 
-.projectPic img:hover{
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px 3px var(--accent-color);
-    
-}
 
-.rightColumn article{
-    margin: 0 3vw;
-    max-width: 30vw;
-    align-self: flex-start;
-    font-size: 24px;
-}
 
-.projDesc p, h2{
-    margin-left: 4.2vw;
-}
+
 
 /* ******** Contact Me ******** */
 
 .fontAwesome{
-    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.fontAwesome div{
+    flex-basis: 100px;
+}
+
+.card i{
     color: var(--accent-color);
-    opacity: 0.6;
+    opacity: 0.6; 
+    transition: 0.3s ease; 
 }
 
-.fontAwesome:hover{    
-    transform: scale(1.2);    
-    opacity: 1;
+
+.card i:hover{  
+    transform: scale(1.1);       
+    opacity: 1;    
 }
 
-.contact a{
-    align-self: flex-end;
-    margin-right: 6vw;
+.contactMe article{
+    margin: 8vh;
 }
 
-.contact article{
-    margin-left: 7vw;
-}
 
 
 
