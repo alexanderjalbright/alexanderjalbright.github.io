@@ -4,16 +4,16 @@ img{
 /* Remove above */
 :root{    
     --background-color: #fff;
-    --foreground-color: #333;
+    --foreground-color: #2a2f32;
     --accent-color: #00bbff;
 
     --nav-height: 8vh;
-    --dropdown-width: 110px;
+    --dropdown-width: 125px;
     --dropdown-radius: 4px;
 }
 
 *{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     line-height: 1.6em;
     box-sizing: border-box;
     margin: 0;
@@ -23,6 +23,10 @@ img{
 html{
     scroll-behavior: smooth;
     background-color: var(--background-color);
+}
+
+h1, nav h2, nav h4{
+    font-family: 'Comfortaa', cursive;
 }
 
 a{
@@ -56,7 +60,7 @@ main{
     padding: 1em 2em;
 }
 
-/* NAVBAR */
+/**************** NAVBAR ****************/
 
 nav > ul{
     position: absolute;
@@ -128,17 +132,12 @@ nav a{
 
 }
 
-/* MAIN */
-header{
-    margin-top: var(--nav-height);
-}
+/**************** MAIN ****************/
 
-/* BODY */
 section {
     margin-bottom: 18vh;
     height: 82vh;
     scroll-snap-align: center;
-    background-color: red;
   }
 
 .home{
@@ -147,16 +146,28 @@ section {
     grid-template-rows: 2fr 1fr 1fr;
     align-items: center;
     text-align: center;
-    font-size: 6vh;
+    font-size: 4vh;
+    /* color: var(--background-color);
+    background-color: var(--foreground-color); */
     color: var(--background-color);
+}
+
+.home div, .home h1, .home h2{
     background-color: var(--foreground-color);
+    border-radius: 8px;
+    padding: 10px;
 }
 
 .home h1{
     margin-top: var(--nav-height);
     font-size: 10vh;
     color: var(--accent-color);
-    font-family: 
+    background-color: var(--foreground-color);
+    border-radius: 8px;
+    padding: 20px 10vw;;
+}
+
+.home div{
 }
 
 .tech-stack span{
@@ -181,15 +192,15 @@ section {
 }
 
 .devicon-css3-plain{
-
+    color: red;
 }
 
 .devicon-html5-plain{
-
+    color: #00bbff;
 }
 
 .devicon-git-plain{
-
+    color: white;
 }
 
 
