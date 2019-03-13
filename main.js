@@ -3,22 +3,34 @@ var logoText = logo.querySelector("h2");
 logo.onmouseover = function(){ logoText.innerHTML = "alexander j albright"};
 logo.onmouseout = function(){ logoText.innerHTML = "alexanderjalbright"};
 
+// var dropdowns = document.querySelectorAll(".dropdown");
+// var choices = [];
+// dropdowns.forEach(function(dropdown){
+//     choices.push(dropdown.querySelectorAll(".choice"));
+//     choices.forEach(function(choice){
+//         dropdown.onmouseover = function(){
+//             choice.forEach(function(item){
+//                 item.style.display = "block";
+//             }); 
+//         }; 
+//         dropdown.onmouseout = function(){
+//             choice.forEach(function(item){
+//                 item.style.display = "none";
+//             });
+//         };      
+//     });
+// });
+
 var dropdowns = document.querySelectorAll(".dropdown");
-var choices = [];
 dropdowns.forEach(function(dropdown){
-    choices.push(dropdown.querySelectorAll(".choice"));
-    choices.forEach(function(choice){
+    var content = dropdown.querySelector(".content");
+    
         dropdown.onmouseover = function(){
-            choice.forEach(function(item){
-                item.style.display = "block";
-            }); 
+            content.style.display = "block";
         }; 
         dropdown.onmouseout = function(){
-            choice.forEach(function(item){
-                item.style.display = "none";
-            });
-        };      
-    });
+            content.style.display = "none";
+        };
 });
 
 
