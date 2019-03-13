@@ -7,7 +7,7 @@ img{
     --foreground-color: #333;
     --accent-color: #00bbff;
 
-    --nav-height: 50px;
+    --nav-height: 8vh;
     --dropdown-width: 110px;
     --dropdown-radius: 4px;
 }
@@ -38,7 +38,7 @@ ul{
 
 
 html, body{
-    scroll-behavior: smooth;
+    
     background-color: var(--background-color);
     height: 100vh;
     overflow: hidden;
@@ -46,6 +46,7 @@ html, body{
 }
 
 main{
+    scroll-behavior: smooth;
     margin-top: 8vh;
     overflow-y: scroll;
     height: 92vh;
@@ -137,6 +138,7 @@ section {
     margin-bottom: 18vh;
     height: 82vh;
     scroll-snap-align: center;
+    background-color: red;
   }
 
 .home{
@@ -146,14 +148,50 @@ section {
     align-items: center;
     text-align: center;
     font-size: 6vh;
+    color: var(--background-color);
+    background-color: var(--foreground-color);
 }
 
 .home h1{
+    margin-top: var(--nav-height);
     font-size: 10vh;
+    color: var(--accent-color);
+    font-family: 
 }
 
-.tech-stack{
-    text-align: center;
+.tech-stack span{
+    font-weight: bold;
+   
 }
+
+.devicon-visualstudio-plain{
+    color: purple;
+}
+
+.devicon-csharp-plain{
+    color: #00bbff;
+}
+
+.devicon-dot-net-plain{
+    color: #00bbff;
+}
+
+.devicon-javascript-plain{
+    color: yellow;
+}
+
+.devicon-css3-plain{
+
+}
+
+.devicon-html5-plain{
+
+}
+
+.devicon-git-plain{
+
+}
+
+
 
 
