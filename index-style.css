@@ -24,3 +24,19 @@ html{
 a{
     text-decoration: none;
 }
+
+body{
+    width: 80vw;
+    margin: 0 auto;
+}
+
+/* NAVBAR */
+nav{
+    position: absolute;
+    
+}
+.choice{
+    display: none;
+}
+
+
