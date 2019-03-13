@@ -9,7 +9,7 @@ img{
 
     --nav-height: 50px;
     --dropdown-width: 110px;
-    --dropdown-radius: 8px;
+    --dropdown-radius: 4px;
 }
 
 *{
@@ -35,9 +35,24 @@ ul{
 }
 
 
-html{
-    width: 80%;
-    margin: 0 auto;
+
+
+html, body{
+    scroll-behavior: smooth;
+    background-color: var(--background-color);
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+main{
+    margin-top: 8vh;
+    overflow-y: scroll;
+    height: 92vh;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: mandatory;
+    width: 100vw;
+    padding: 1em 2em;
 }
 
 /* NAVBAR */
@@ -73,6 +88,8 @@ nav a{
     background-color: var(--background-color);
     color: var(--foreground-color);
     padding: 5px;
+    border-top-left-radius: var(--dropdown-radius);
+    border-top-right-radius: var(--dropdown-radius);
     border-bottom: 1px solid var(--foreground-color);
 }
 .content{
@@ -113,6 +130,30 @@ nav a{
 /* MAIN */
 header{
     margin-top: var(--nav-height);
+}
+
+/* BODY */
+section {
+    margin-bottom: 18vh;
+    height: 82vh;
+    scroll-snap-align: center;
+  }
+
+.home{
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 2fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    font-size: 6vh;
+}
+
+.home h1{
+    font-size: 10vh;
+}
+
+.tech-stack{
+    text-align: center;
 }
 
 
