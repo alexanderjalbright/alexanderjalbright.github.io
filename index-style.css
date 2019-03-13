@@ -58,6 +58,10 @@ nav a{
     color: var(--background-color);
 }
 
+.logo{
+    color: var(--accent-color);
+}
+
 .dropdown{
     text-align: center;
     
@@ -75,7 +79,7 @@ nav a{
 
 .choice{
     text-align: center;
-    background-color: #00bbff;
+    background-color: var(--accent-color);
     width: var(--dropdown-width);
 }
 
@@ -91,7 +95,7 @@ nav a{
 
 /* MAIN */
 header{
-    margin-top: 50px;
+    margin-top: var(--nav-height);
 }
 
 
