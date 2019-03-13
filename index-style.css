@@ -70,12 +70,10 @@ nav a{
 }
 
 .label{
+    background-color: var(--background-color);
+    color: var(--foreground-color);
     padding: 5px;
-    border-top-left-radius: var(--dropdown-radius);
-    border-top-right-radius: var(--dropdown-radius);
-    border-top: 2px solid var(--accent-color);    
-    border-left: 2px solid var(--accent-color);    
-    border-right: 2px solid var(--accent-color);    
+    border-bottom: 1px solid var(--foreground-color);
 }
 .content{
     display: none;
@@ -86,17 +84,19 @@ nav a{
 
 .choice{
     text-align: center;
-    background-color: var(--accent-color);
+    background-color: var(--background-color);
     width: var(--dropdown-width);
     padding: 6px 0;
-    --nav-link-font-color: var(--background-color);
+    --nav-link-font-color: var(--foreground-color);
+    border: 2px solid var(--foreground-color);
+    color: var(--foreground-color);
 }
 
 .choice:hover{
     transform: scale(1.1);
-    color: var(--foreground-color);
-    background-color: var(--background-color);
-    --nav-link-font-color: var(--foreground-color);
+    color: var(--accent-color);
+    background-color: var(--foreground-color);
+    --nav-link-font-color: var(--accent-color);
     border: 2px solid #333;
 }
 
