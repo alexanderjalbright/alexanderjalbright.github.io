@@ -228,6 +228,7 @@ section {
     display: grid;
     grid-template-rows: 4fr 1fr;
     align-self: center;
+    color: var(--foreground-color);
 }
 
 #aboutMe h1{
@@ -247,13 +248,36 @@ section {
     color: var(--background-color);
 }
 
+/**************** MY PROJECTS ****************/
 
+#myProjects{
+    padding: 3em 0;
+    display: grid;
+    grid-template-columns: 80vw;;
+    align-items: center;
+}
+.project{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1vh solid var(--foreground-color);
+    height: 50vh;
+}
 
+.project article{
+    padding: 1em 2em;
+}
 
+.project2{
+    display: none;
+}
 
+.project3{
+    display: none;
+}
 
 #myProjects img{
-    width: 300px;
+    width: 40vw;
+    height: 49vh;
 }
 
 
