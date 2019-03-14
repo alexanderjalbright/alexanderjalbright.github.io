@@ -1,6 +1,4 @@
-img{
-    width: 300px;
-}
+
 /* Remove above */
 :root{    
     --background-color: #fff;
@@ -49,17 +47,6 @@ html, body{
     
 }
 
-main{
-    scroll-behavior: smooth;
-    margin-top: var(--nav-height);
-    overflow-y: scroll;
-    height: 92vh;
-    scroll-snap-points-y: repeat(100vh);
-    scroll-snap-type: mandatory;
-    width: 100vw;
-    padding: 1em 2em;
-}
-
 /**************** NAVBAR ****************/
 nav{
     position: fixed;
@@ -80,13 +67,13 @@ nav > ul{
     background-color: var(--foreground-color);
     color: var(--background-color);
     text-align: center;
+    
+    box-shadow: 0px 3px 10px 10px #333;
 }
 nav a{
     color: var(--background-color);
 }
 
-.nav-size{
-}
 .nav-unlock{
     display: none;
 }
@@ -95,9 +82,6 @@ nav a{
     color: var(--accent-color);
     align-self: center;
 }
-
-
-
 
 .dropdown{
     align-self: end;
@@ -109,14 +93,13 @@ nav a{
     padding: 5px;
     border-top-left-radius: var(--dropdown-radius);
     border-top-right-radius: var(--dropdown-radius);
-    border-bottom: 1px solid var(--foreground-color);
+    border: 2px solid var(--foreground-color);
 }
 .content{
     display: none;
     position: absolute;
     top: var(--nav-height);
 }
-
 
 .choice{
     text-align: center;
@@ -149,12 +132,25 @@ nav a{
 
 /**************** MAIN ****************/
 
+main{
+    scroll-behavior: smooth;
+    margin-top: var(--nav-height);
+    overflow-y: scroll;
+    height: 92vh;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: mandatory;
+    width: 100vw;
+    padding: 1em 2em;
+}
+
 section {
     margin: 0 auto 18vh auto;
     height: 82vh;
     scroll-snap-align: center;
     width: 80vw;
   }
+
+/**************** HOME ****************/
 
 .home{
     display: grid;
@@ -178,9 +174,6 @@ section {
     background-color: var(--foreground-color);
     border-radius: 8px;
     padding: 20px 10vw;
-}
-
-.home div{
 }
 
 .tech-stack span{
@@ -217,6 +210,50 @@ section {
     color: white;
 }
 
+/**************** ABOUT ME ****************/
 
+#aboutMe{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.headShot{
+    height: 70vh;
+    align-self: center;
+    border-radius: 20px;
+    box-shadow: 0px 3px 20px 10px var(--foreground-color);
+}
+
+#aboutMe article{
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    align-self: center;
+}
+
+#aboutMe h1{
+    font-size: 2em;
+    
+}
+
+.me{
+    font-size: 1.5em;
+}
+
+.quote{
+    background-color: rgba(42, 47, 50, 0.7);
+    text-align: center;
+    padding: 1em;
+    border-radius: 15px;
+    color: var(--background-color);
+}
+
+
+
+
+
+
+#myProjects img{
+    width: 300px;
+}
 
 
