@@ -1,18 +1,18 @@
-const logo = document.querySelector(".logo");
+const logo = document.querySelector("#logo");
 const logoText = logo.querySelector("h2");
 logo.onmouseover = function(){ logoText.innerHTML = "alexander j albright"};
 logo.onmouseout = function(){ logoText.innerHTML = "alexanderjalbright"};
 
-const navLock = document.querySelector(".nav-lock");
-const navUnlock = document.querySelector(".nav-unlock");
+const navShow = document.querySelector("#nav-show");
+const navHide = document.querySelector("#nav-hide");
 const nav = document.querySelector("nav");
 const dropdowns = document.querySelectorAll(".dropdown");
 const sections = document.querySelectorAll("section");
 const main = document.querySelector("main");
 
-navLock.onclick = function(){
-    navLock.style.display = "none";
-    navUnlock.style.display = "block";
+navShow.onclick = function(){
+    navShow.style.display = "none";
+    navHide.style.display = "block";
     nav.style.width = "10px";
     dropdowns.forEach(function(dropdown){
         dropdown.style.display = "none";
@@ -26,9 +26,9 @@ navLock.onclick = function(){
     main.style.marginTop = "0";
 }
 
-navUnlock.onclick = function(){
-    navUnlock.style.display = "none";
-    navLock.style.display = "block";
+navHide.onclick = function(){
+    navHide.style.display = "none";
+    navShow.style.display = "block";
     nav.style.width = "100vw";
     dropdowns.forEach(function(item){
         item.style.display = "block";
