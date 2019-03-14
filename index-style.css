@@ -295,3 +295,22 @@ section {
 
 /**************** CONTACT ME ****************/
 
+#contactMe{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: space-around;
+}
+
+.contact{
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+    align-items: center;
+    text-align: center; 
+    padding: 5vh 0;
+}
+
+.contact2{
+    border-top: 4px solid var(--foreground-color);
+    border-bottom: 4px solid var(--foreground-color);
+}
