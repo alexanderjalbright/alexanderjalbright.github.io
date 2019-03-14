@@ -54,5 +54,26 @@ dropdowns.forEach(function(dropdown){
     };
 });
 
-// document.documentElement.style.setProperty('--nav-height', '4vh');
+const leftArrow = document.querySelector(".fa-arrow-left");
+const rightArrow = document.querySelector(".fa-arrow-right");
+
+
+
+rightArrow.onclick = function(){
+    let projects = document.querySelectorAll(".project");
+    let myProjects = projects[0].parentNode;
+    let movingProject = projects[0];
+    projects[0].remove();
+    rightArrow.remove();
+    myProjects.appendChild(movingProject);
+    myProjects.appendChild(rightArrow);
+}
+
+leftArrow.onclick = function(){
+    let projects = document.querySelectorAll(".project");
+    let myProjects = projects[2].parentNode;
+    let movingProject = projects[2];
+    projects[2].remove();
+    myProjects.insertBefore(movingProject,projects[0]);
+}
 

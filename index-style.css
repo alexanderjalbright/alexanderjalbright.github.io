@@ -186,11 +186,7 @@ section {
     color: #B906E8;
 }
 
-.devicon-csharp-plain{
-    color: #00bbff;
-}
-
-.devicon-dot-net-plain{
+.devicon-csharp-plain, .devicon-dot-net-plain, .devicon-html5-plain{
     color: #00bbff;
 }
 
@@ -251,14 +247,31 @@ section {
 /**************** MY PROJECTS ****************/
 
 #myProjects{
-    padding: 3em 0;
     display: grid;
-    grid-template-columns: 80vw;;
+    grid-template-columns: 5vw 70vw 5vw;
     align-items: center;
+    justify-content: center;
+    grid-gap: 2vw;
 }
+.fa-arrow-left, .fa-arrow-right{
+    text-align: center;
+    font-size: 3em;
+    border: 3px solid var(--foreground-color);
+    padding: 1.5vh 0;
+    border-radius: 10vh;
+}
+.fa-arrow-left:hover, .fa-arrow-right:hover{
+    background-color: var(--foreground-color);
+    color: var(--background-color);
+}
+
 .project{
+    display:none;
+}
+
+.project:first-of-type{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 35vw 35vw;
     border: 1vh solid var(--foreground-color);
     height: 50vh;
 }
@@ -276,8 +289,9 @@ section {
 }
 
 #myProjects img{
-    width: 40vw;
-    height: 49vh;
+    width: 34vw;
+    height: 48.5vh;
 }
 
+/**************** CONTACT ME ****************/
 
