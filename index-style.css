@@ -51,7 +51,7 @@ html, body{
 
 main{
     scroll-behavior: smooth;
-    margin-top: 8vh;
+    margin-top: var(--nav-height);
     overflow-y: scroll;
     height: 92vh;
     scroll-snap-points-y: repeat(100vh);
@@ -61,23 +61,34 @@ main{
 }
 
 /**************** NAVBAR ****************/
-
-nav > ul{
-    position: absolute;
+nav{
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    margin-left: 0;
+    
+}
+nav > ul{
+    
     height: var(--nav-height);
     display: grid;
-    grid-template-columns: auto 1fr var(--dropdown-width) var(--dropdown-width) var(--dropdown-width);
+    grid-template-columns: 15px auto 1fr var(--dropdown-width) var(--dropdown-width) var(--dropdown-width);
     grid-gap: 1em;
-    align-items: end;
-    padding: 0 2em;
+    align-items: center;
+    padding: 0 2em 0 1em;
     background-color: var(--foreground-color);
     color: var(--background-color);
+    text-align: center;
 }
 nav a{
     color: var(--background-color);
+}
+
+.nav-size{
+}
+.nav-unlock{
+    display: none;
 }
 
 .logo{
@@ -85,8 +96,11 @@ nav a{
     align-self: center;
 }
 
+
+
+
 .dropdown{
-    text-align: center;
+    align-self: end;
 }
 
 .label{
@@ -120,6 +134,7 @@ nav a{
     background-color: var(--foreground-color);
     --nav-link-font-color: var(--accent-color);
     border: 2px solid #333;
+    box-shadow: 0 0px 2px 1px #fff;
 }
 
 .choice > a{
@@ -135,20 +150,19 @@ nav a{
 /**************** MAIN ****************/
 
 section {
-    margin-bottom: 18vh;
+    margin: 0 auto 18vh auto;
     height: 82vh;
     scroll-snap-align: center;
+    width: 80vw;
   }
 
 .home{
     display: grid;
     justify-content: center;
-    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     align-items: center;
     text-align: center;
     font-size: 4vh;
-    /* color: var(--background-color);
-    background-color: var(--foreground-color); */
     color: var(--background-color);
 }
 
@@ -159,12 +173,11 @@ section {
 }
 
 .home h1{
-    margin-top: var(--nav-height);
     font-size: 10vh;
     color: var(--accent-color);
     background-color: var(--foreground-color);
     border-radius: 8px;
-    padding: 20px 10vw;;
+    padding: 20px 10vw;
 }
 
 .home div{
@@ -172,11 +185,12 @@ section {
 
 .tech-stack span{
     font-weight: bold;
+    margin: 0;
    
 }
 
 .devicon-visualstudio-plain{
-    color: purple;
+    color: #B906E8;
 }
 
 .devicon-csharp-plain{
