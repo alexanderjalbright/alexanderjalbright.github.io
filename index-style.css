@@ -152,7 +152,7 @@ section {
 
 /**************** HOME ****************/
 
-.home{
+#home{
     display: grid;
     justify-content: center;
     grid-template-rows: 1fr 1fr 1fr;
@@ -162,13 +162,13 @@ section {
     color: var(--background-color);
 }
 
-.home div, .home h1, .home h2{
+#home div, #home h1, #home h2{
     background-color: var(--foreground-color);
     border-radius: 8px;
     padding: 10px;
 }
 
-.home h1{
+#home h1{
     font-size: 10vh;
     color: var(--accent-color);
     background-color: var(--foreground-color);
@@ -253,27 +253,34 @@ section {
     justify-content: center;
     grid-gap: 2vw;
 }
-.fa-arrow-left, .fa-arrow-right{
+#left-arrow, #right-arrow{
+    display: grid;
+    grid-template-columns: 1fr;
     text-align: center;
+    align-items: center;
     font-size: 3em;
+    width: 80px;
+    height: 80px;
     border: 3px solid var(--foreground-color);
-    padding: 1.5vh 0;
-    border-radius: 10vh;
+    border-radius: 50%;
 }
-.fa-arrow-left:hover, .fa-arrow-right:hover{
+
+#left-arrow:hover, #right-arrow:hover{
     background-color: var(--foreground-color);
-    color: var(--background-color);
+    color: var(--accent-color);
 }
 
 .project{
     display:none;
+    box-sizing: content-box;
 }
 
-.project:first-of-type{
+.project:nth-of-type(2){
     display: grid;
     grid-template-columns: 35vw 35vw;
     border: 1vh solid var(--foreground-color);
     height: 50vh;
+
 }
 
 .project article{
@@ -289,8 +296,8 @@ section {
 }
 
 #myProjects img{
-    width: 34vw;
-    height: 48.5vh;
+    width: 35vw;
+    height: 50vh;
 }
 
 /**************** CONTACT ME ****************/
@@ -314,3 +321,8 @@ section {
     border-top: 4px solid var(--foreground-color);
     border-bottom: 4px solid var(--foreground-color);
 }
+
+#footer{
+    text-align: center;
+}
+

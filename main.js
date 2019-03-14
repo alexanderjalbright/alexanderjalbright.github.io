@@ -54,8 +54,8 @@ dropdowns.forEach(function(dropdown){
     };
 });
 
-const leftArrow = document.querySelector(".fa-arrow-left");
-const rightArrow = document.querySelector(".fa-arrow-right");
+const leftArrow = document.querySelector("#left-arrow");
+const rightArrow = document.querySelector("#right-arrow");
 
 
 
