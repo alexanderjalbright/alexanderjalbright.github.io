@@ -158,7 +158,7 @@ section:last-of-type{
     justify-content: center;
     grid-template-rows: 1fr 1fr 1fr;
     align-items: center;
-    font-size: 4vh;
+    font-size: 2vw;
     color: var(--background-color);
 }
 
@@ -169,7 +169,7 @@ section:last-of-type{
 }
 
 #home h1{
-    font-size: 10vh;
+    font-size: 5vw;
     color: var(--accent-color);
     background-color: var(--foreground-color);
     border-radius: 8px;
@@ -211,6 +211,8 @@ section:last-of-type{
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    max-height: 100vh;
+    grid-gap: 2em;
     
 }
 
@@ -222,9 +224,10 @@ section:last-of-type{
 
 #aboutMe article{
     display: grid;
-    grid-template-rows: 4fr 1fr;
+    grid-template-rows: 2fr 1fr;
     color: var(--foreground-color);
-    font-size: 1.5em;
+    font-size: 1.3em;
+    width: 100%;
     
 }
 
@@ -233,6 +236,7 @@ section:last-of-type{
 }
 
 .quote{
+    margin-top: 8vh;
     background-color: rgba(42, 47, 50, 0.7);
     padding: 1em;
     border-radius: 15px;
@@ -301,6 +305,10 @@ section:last-of-type{
     grid-template-columns: 40vw 40vw;
     align-items: center;
     padding: 5vh 0;
+}
+
+.contact p{
+
 }
 
 #contact-middle{
