@@ -7,6 +7,18 @@
         display: none;
     }
 
+    .alt-dropdown{
+        display: block;
+    }
+
+    nav > ul{    
+        grid-template-columns: auto var(--dropdown-width);
+    }
+
+    #logo{
+        justify-self: center;
+    }
+
     #aboutMe{
         grid-template-areas: "pic pic"
                              "text text";
@@ -23,6 +35,17 @@
 
     #aboutMe h1{
         text-align: center;
+    }
+
+    #myProjects{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "project project"
+                             "leftArrow rightArrow";
+        justify-items: center;
+    }
+
+    .project{
+        
     }
 }
 
