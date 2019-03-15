@@ -1,35 +1,161 @@
-/* @media screen and (max-width: 1790px){
+@media only screen and (max-width: 1460px){
     
 }
 
-@media screen and (max-width: 1300px){
+
+@media only screen and (max-width: 1300px){
     #headShot{
         height: 50vh;
     }
-}
+    #myProjects{
+        grid-template-columns: 35vw 35vw;
+        grid-template-rows: 10vh 75vh;
+        grid-auto-flow: dense;
+    }   
+    .project{
+        grid-row: 1;
+        grid-column: 1 / span 2;
+    }
 
-@media screen and (max-width: 1050px) {
+    #aboutMe article{
+        grid-template-rows: 2fr 1fr;
+        font-size: 1em;
+    }
+
+    section{
+        scroll-snap-align: none;
+        height: auto;
+        margin: 30vh auto;
+    }
+
+    main{
+        
+        scroll-snap-points-y: repeat(100vh);
+        scroll-snap-type: none;
+        
+    }
+
+    #left-arrow, #right-arrow{
+        
+        justify-self: center;
+        
+    }
+
+    .project:nth-of-type(2){
+        margin-top: 20vh;
+        height: 60vh;
+        width: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        border: none;
+    }
+
+    #myProjects img{
+        height: 250px;
+    }
+
+    .project article{
+        padding: 1em 2em;
+        width: auto;
+        justify-self: center;
+    }
+
+    .project article h2, .project article p{
+        text-align: center;
+    }
+
+    .quote{
+        height: 20vh;
+        margin: auto 10px;
+    }
+
+
+
+@media only screen and (max-width: 1140px) {
     main{
         padding: 0;
     }
-    section{
-        width: 100vw;
+
+    #aboutMe article{
+        grid-template-rows: 1fr 1fr;
+        font-size: 1em;
     }
+
 }
 
-@media screen and (max-width: 810px){
+@media only screen and (max-width: 810px){
     #aboutMe h1{
-        font-size: 5px;   
+        font-size: 1.5;   
     }
 }
-  
 
-@media screen and (max-width: 730px) {
+@media only screen and (max-width: 730px) {
     nav > ul{
         grid-template-columns: 15px 1fr;
+    }
+
+    #logo{
+        justify-self: center;
     }
     
     .dropdown{
         display: none;
     }
-} */
+
+    #aboutMe{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-content: center;
+    }
+
+    section{
+        scroll-snap-align: none;
+        height: auto;
+        margin: 30vh auto 30vh auto;
+    }
+
+    main{
+        
+        scroll-snap-points-y: repeat(100vh);
+        scroll-snap-type: none;
+        
+    }
+
+    #headShot{
+        justify-self: center;
+    }
+
+    #myProjects img{
+        height: 200pxpx;
+    }
+
+    article h1, article h2, article p {
+        text-align: center;
+    }
+
+    .quote{
+        align-self: center;
+    }
+
+    .contact{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #home{
+        font-size: 14px;
+    }
+    
+    #home h1{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 730px) {
+    section{
+        margin-bottom: 50vh;
+    }
+}
+
