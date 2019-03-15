@@ -11,7 +11,8 @@
 *{
     font-family: 'Ubuntu', sans-serif;
     line-height: 1.6em;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin: 0;
     padding: 0;
     text-align: center;  
@@ -20,7 +21,6 @@
 html{
     scroll-behavior: smooth;
     background-color: var(--background-color);
-    background-color: var(--background-color);
     overflow: hidden;
 }
 
@@ -28,8 +28,12 @@ body{
     scroll-behavior: smooth;
     overflow-y: scroll;
     overflow-x: hidden;
-    scroll-snap-points-y: repeat(100vh);
-    scroll-snap-type: mandatory;
+    -webkit-scroll-snap-points-y: repeat(100vh);
+        -ms-scroll-snap-points-y: repeat(100vh);
+            scroll-snap-points-y: repeat(100vh);
+    -webkit-scroll-snap-type: mandatory;
+        -ms-scroll-snap-type: mandatory;
+            scroll-snap-type: mandatory;
     height: 92vh;
     margin-top: var(--nav-height);
 }
@@ -56,20 +60,27 @@ nav{
     position: fixed;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     margin: 0 auto 20px auto;
     padding: 0 50px;
     background-color: var(--foreground-color);
-    box-shadow: 0px 3px 10px 6px #333;
+    -webkit-box-shadow: 0px 3px 10px 6px #333;
+            box-shadow: 0px 3px 10px 6px #333;
     width: 100%;
 }
 
 nav > ul{    
     height: var(--nav-height);
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: auto 20px var(--dropdown-width) 20px var(--dropdown-width) 20px var(--dropdown-width);
     grid-template-columns: auto var(--dropdown-width) var(--dropdown-width) var(--dropdown-width);
     grid-gap: 20px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: var(--background-color);
 }
 
@@ -83,12 +94,17 @@ nav a{
 
 #logo, .logo-menu{
     color: var(--accent-color);
-    align-self: center;
-    justify-self: start;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: start;
+        justify-self: start;
 }
 
 .dropdown{
-    align-self: end;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
 }
 
 .alt-dropdown{
@@ -118,12 +134,15 @@ nav a{
 }
 
 .choice:hover{
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
     color: var(--accent-color);
     background-color: var(--foreground-color);
     --nav-link-font-color: var(--accent-color);
     border: 2px solid #333;
-    box-shadow: 0 0px 2px 1px #fff;
+    -webkit-box-shadow: 0 0px 2px 1px #fff;
+            box-shadow: 0 0px 2px 1px #fff;
 }
 
 .choice a{
@@ -155,7 +174,9 @@ section {
   z-index: 1; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   top: 0;
   width: 100%; 
   height: 100%; /* Full height */
@@ -199,13 +220,38 @@ section {
 /**************** HOME ****************/
 
 #home{
+    display: -ms-grid;
     display: grid;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-columns: 100%;
     grid-template-columns: 100%;
+    -ms-grid-rows: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 28px;
     color: var(--background-color);
+    
+}
+
+#home > *:nth-child(1){    
+    -ms-grid-row: 1;    
+    -ms-grid-column: 1;
+    
+}
+
+#home > *:nth-child(2){    
+    -ms-grid-row: 2;    
+    -ms-grid-column: 1;
+    
+}
+
+#home > *:nth-child(3){    
+    -ms-grid-row: 3;    
+    -ms-grid-column: 1;
     
 }
 
@@ -253,23 +299,35 @@ section {
 /**************** ABOUT ME ****************/
 
 #aboutMe{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "pic text" 
+        grid-template-areas: "pic text" 
                          "pic text";
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 10px 20px;    
 }
 
 #headShot{
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
     grid-area: pic;
     max-width: 400px;
     border-radius: 20px;
-    box-shadow: 0px 3px 20px 10px var(--foreground-color);
+    -webkit-box-shadow: 0px 3px 20px 10px var(--foreground-color);
+            box-shadow: 0px 3px 20px 10px var(--foreground-color);
 }
 
 #aboutMe article{
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
     grid-area: text;
     color: var(--foreground-color);
     font-size: 1.3em;
@@ -293,13 +351,20 @@ section {
 /**************** MY PROJECTS ****************/
 
 #myProjects{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 80px 2vw 1fr 2vw 80px;
     grid-template-columns: 80px 1fr 80px;
+    -ms-grid-rows: 1fr 2vw 100px;
     grid-template-rows: 1fr 100px;
-    grid-template-areas: "a b c"
+        grid-template-areas: "a b c"
                          "a b c";
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     grid-gap: 2vw;
     padding-left: 20px;
     padding-right: 20px;
@@ -307,9 +372,13 @@ section {
 }
 
 #left-arrow, #right-arrow{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 3em;
     width: 80px;
     height: 80px;
@@ -323,35 +392,55 @@ section {
 }
 
 #left-arrow{
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
     grid-area: a;
 }
 
 #right-arrow{
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 5;
     grid-area: c;
 }
 
 .project{
     display: none;
-    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
 }
 
 .project:nth-of-type(2){
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 3;
     grid-area: b;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "d e"
+        grid-template-areas: "d e"
                          "d e";
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-left: 10px;
     margin-right: 10px;
    
 }
 
 #myProjects img{
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
     width: 100%;
     grid-area: d;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     border: 5px solid var(--foreground-color);
 
 }
@@ -361,6 +450,9 @@ section {
 }
 
 .project article{
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
     padding: 1em 2em;
     grid-area: e;
 }
@@ -376,17 +468,27 @@ section {
 /**************** CONTACT ME ****************/
 
 #contactMe{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-rows: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    justify-content: center;
-    align-items: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: space-around;
+        -ms-flex-align: space-around;
+            align-items: space-around;
     padding-top: 50px;
 }
 
 .contact{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 40vw 40vw;
     grid-template-columns: 40vw 40vw;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 
@@ -404,5 +506,7 @@ section {
 }
 
 .i-contact:hover{
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
 }
