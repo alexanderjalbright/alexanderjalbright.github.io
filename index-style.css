@@ -20,6 +20,18 @@
 html{
     scroll-behavior: smooth;
     background-color: var(--background-color);
+    background-color: var(--background-color);
+    overflow: hidden;
+}
+
+body{
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: mandatory;
+    height: 92vh;
+    margin-top: var(--nav-height);
 }
 
 h1, nav h2, nav h4{
@@ -35,13 +47,6 @@ ul{
     list-style: none;
 }
 
-html, body{
-    
-    background-color: var(--background-color);
-    height: 100vh;
-    overflow: hidden;
-}
-
 article h1, article h2, article p{
     text-align: left;
 }
@@ -50,23 +55,22 @@ article h1, article h2, article p{
 nav{
     position: fixed;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto 20px auto;
+    padding: 0 50px;
+    background-color: var(--foreground-color);
+    box-shadow: 0px 3px 10px 6px #333;
     width: 100%;
-    margin-left: 0;
-    
 }
 
 nav > ul{    
     height: var(--nav-height);
     display: grid;
-    grid-template-columns: 15px 1fr var(--dropdown-width) var(--dropdown-width) var(--dropdown-width);
-    grid-gap: 1em;
+    grid-template-columns: auto var(--dropdown-width) var(--dropdown-width) var(--dropdown-width);
+    grid-gap: 20px;
     align-items: center;
-    padding: 0 2em 0 1em;
-    background-color: var(--foreground-color);
     color: var(--background-color);
-      
-    box-shadow: 0px 3px 10px 10px #333;
 }
 nav a{
     color: var(--background-color);
@@ -89,21 +93,20 @@ nav a{
 .label{
     background-color: var(--background-color);
     color: var(--foreground-color);
-    padding: 5px;
     border-top-left-radius: var(--dropdown-radius);
     border-top-right-radius: var(--dropdown-radius);
     border: 2px solid var(--foreground-color);
 }
+
 .content{
     display: none;
     position: absolute;
     top: var(--nav-height);
+    width: var(--dropdown-width);
 }
 
 .choice{
     background-color: var(--background-color);
-    width: var(--dropdown-width);
-    padding: 6px 0;
     --nav-link-font-color: var(--foreground-color);
     border: 2px solid var(--foreground-color);
     color: var(--foreground-color);
@@ -129,27 +132,13 @@ nav a{
 
 /**************** MAIN ****************/
 
-main{
-    scroll-behavior: smooth;
-    margin-top: var(--nav-height);
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height: 92vh;
-    scroll-snap-points-y: repeat(100vh);
-    scroll-snap-type: mandatory;
-    width: 100vw;
-    padding: 1em 2em;
-}
+
 
 section {
-    margin: 0 auto 18vh auto;
-    height: 82vh;
-    scroll-snap-align: center;
-    width: 80vw;
-}
-
-section:last-of-type{
-    margin-bottom: 9vh;
+    scroll-snap-align: start;
+    min-height: 92vh;
+    max-width: 1200px;
+    margin: 0 auto var(--nav-height) auto;
 }
 
 /**************** HOME ****************/
@@ -157,24 +146,24 @@ section:last-of-type{
 #home{
     display: grid;
     justify-content: center;
+    grid-template-columns: 100%;
     grid-template-rows: 1fr 1fr 1fr;
     align-items: center;
-    font-size: 2vw;
+    font-size: 28px;
     color: var(--background-color);
+    
 }
 
 #home div, #home h1, #home h2{
     background-color: var(--foreground-color);
     border-radius: 8px;
-    padding: 10px;
 }
 
 #home h1{
-    font-size: 5vw;
+    font-size: 50px;
     color: var(--accent-color);
     background-color: var(--foreground-color);
     border-radius: 8px;
-    padding: 20px 10vw;
 }
 
 #tech-stack span{
@@ -211,21 +200,23 @@ section:last-of-type{
 #aboutMe{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "pic text"
+                         "pic text";
     align-items: center;
-    max-height: 100vh;
-    grid-gap: 2em;
+    padding: 10px 20px;
     
 }
 
 #headShot{
-    height: 70vh;
+    grid-area: pic;
+    max-width: 430px;
     border-radius: 20px;
     box-shadow: 0px 3px 20px 10px var(--foreground-color);
 }
 
 #aboutMe article{
-    display: grid;
-    grid-template-rows: 2fr 1fr;
+    grid-area: text;
     color: var(--foreground-color);
     font-size: 1.3em;
     width: 100%;
@@ -308,7 +299,6 @@ section:last-of-type{
     display: grid;
     grid-template-columns: 40vw 40vw;
     align-items: center;
-    padding: 5vh 0;
 }
 
 

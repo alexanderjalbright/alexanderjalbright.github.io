@@ -1,161 +1,83 @@
-@media only screen and (max-width: 1460px){
-    
-}
-
-
-@media only screen and (max-width: 1300px){
-    #headShot{
-        height: 50vh;
-    }
-    #myProjects{
-        grid-template-columns: 35vw 35vw;
-        grid-template-rows: 10vh 75vh;
-        grid-auto-flow: dense;
-    }   
-    .project{
-        grid-row: 1;
-        grid-column: 1 / span 2;
-    }
-
-    #aboutMe article{
-        grid-template-rows: 2fr 1fr;
-        font-size: 1em;
-    }
-
-    section{
-        scroll-snap-align: none;
-        height: auto;
-        margin: 30vh auto;
-    }
-
-    main{
-        
-        scroll-snap-points-y: repeat(100vh);
+@media screen and (max-width: 950px){
+    body{
         scroll-snap-type: none;
-        
     }
 
-    #left-arrow, #right-arrow{
-        
-        justify-self: center;
-        
-    }
-
-    .project:nth-of-type(2){
-        margin-top: 20vh;
-        height: 60vh;
-        width: auto;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        border: none;
-    }
-
-    #myProjects img{
-        height: 250px;
-    }
-
-    .project article{
-        padding: 1em 2em;
-        width: auto;
-        justify-self: center;
-    }
-
-    .project article h2, .project article p{
-        text-align: center;
-    }
-
-    .quote{
-        height: 20vh;
-        margin: auto 10px;
-    }
-
-
-
-@media only screen and (max-width: 1140px) {
-    main{
-        padding: 0;
-    }
-
-    #aboutMe article{
-        grid-template-rows: 1fr 1fr;
-        font-size: 1em;
-    }
-
-}
-
-@media only screen and (max-width: 810px){
-    #aboutMe h1{
-        font-size: 1.5;   
-    }
-}
-
-@media only screen and (max-width: 730px) {
-    nav > ul{
-        grid-template-columns: 15px 1fr;
-    }
-
-    #logo{
-        justify-self: center;
-    }
-    
     .dropdown{
         display: none;
     }
 
     #aboutMe{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        justify-content: center;
-    }
-
-    section{
-        scroll-snap-align: none;
-        height: auto;
-        margin: 30vh auto 30vh auto;
-    }
-
-    main{
-        
-        scroll-snap-points-y: repeat(100vh);
-        scroll-snap-type: none;
-        
+        grid-template-areas: "pic pic"
+                             "text text";
     }
 
     #headShot{
         justify-self: center;
     }
 
-    #myProjects img{
-        height: 200pxpx;
+    #aboutMe article{
+        max-width: 520px;
+        justify-self: center;
     }
 
-    article h1, article h2, article p {
+    #aboutMe h1{
         text-align: center;
     }
-
-    .quote{
-        align-self: center;
-    }
-
-    .contact{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
 }
 
-@media only screen and (max-width: 500px) {
-    #home{
-        font-size: 14px;
+@media screen and (max-width: 500px){
+    #headShot{
+        max-width: 500px;
+        box-shadow: none;
     }
     
+}
+
+
+@media screen and (max-width: 660px){
+    #home{
+        font-size: 16px;
+        --devicon-font-size: 30px;
+    }
+
     #home h1{
-        font-size: 25px;
+        font-size: 28px;
+    }
+
+    #home span{
+        display: none;
+    }
+
+    #home i{
+        margin: 0 5px;
+    }
+
+    #tech-stack{
+        padding: 5px 2px;
+    }
+
+    .devicon-visualstudio-plain{
+        font-size: var(--devicon-font-size);
+    }
+    
+    .devicon-csharp-plain, .devicon-dot-net-plain, .devicon-html5-plain{
+        font-size: var(--devicon-font-size);
+    }
+    
+    .devicon-javascript-plain{
+        font-size: var(--devicon-font-size);
+    }
+    
+    .devicon-css3-plain{
+        font-size: var(--devicon-font-size);
+    }
+    
+    .devicon-html5-plain{
+        font-size: var(--devicon-font-size);
+    }
+    
+    .devicon-git-plain{
+        font-size: var(--devicon-font-size);
     }
 }
-
-@media only screen and (max-width: 730px) {
-    section{
-        margin-bottom: 50vh;
-    }
-}
-

@@ -7,48 +7,48 @@ const display = (a,b) => {
     a.style.display = b;
 }
 
-const navShow = document.querySelector("#nav-show");
-const navHide = document.querySelector("#nav-hide");
-const nav = document.querySelector("nav");
+// const navShow = document.querySelector("#nav-show");
+// const navHide = document.querySelector("#nav-hide");
+// const nav = document.querySelector("nav");
 const dropdowns = document.querySelectorAll(".dropdown");
-const sections = document.querySelectorAll("section");
-const main = document.querySelector("main");
+// const sections = document.querySelectorAll("section");
+// const body = document.querySelector("body");
 
-navShow.onclick = () => {
-    // navShow.style.display = "none";
-    // navHide.style.display = "block";
-    display(navShow, "none");
-    display(navHide, "block");
-    nav.style.width = "10px";
-    // dropdowns.forEach(dropdown => dropdown.style.display = "none");
-    // logo.style.display = "none";
-    dropdowns.forEach(dropdown => display(dropdown, "none"));
-    display(logo, "none");
-    sections.forEach(section => {
-        section.style.margin = "0 auto";
-        section.style.height = "100vh";
-    });
-    main.style.height = "100vh";
-    main.style.marginTop = "0";
-}
+// navShow.onclick = () => {
+//     // navShow.style.display = "none";
+//     // navHide.style.display = "block";
+//     display(navShow, "none");
+//     display(navHide, "block");
+//     nav.style.width = "10px";
+//     // dropdowns.forEach(dropdown => dropdown.style.display = "none");
+//     // logo.style.display = "none";
+//     dropdowns.forEach(dropdown => display(dropdown, "none"));
+//     display(logo, "none");
+//     sections.forEach(section => {
+//         section.style.margin = "0 auto";
+//         section.style.height = "100vh";
+//     });
+//     body.style.height = "100vh";
+//     body.style.marginTop = "0";
+// }
 
-navHide.onclick = () => {
-    // navHide.style.display = "none";
-    // navShow.style.display = "block";
-    display(navHide, "none");
-    display(navShow, "block");
-    nav.style.width = "100vw";
-    // dropdowns.forEach(item => item.style.display = "block");
-    // logo.style.display = "block";
-    dropdowns.forEach(item => display(item, "block"));
-    display(logo, "block");
-    sections.forEach(section => {
-        section.style.margin = "0 auto 18vh auto";
-        section.style.height = "82vh";
-    });
-    main.style.height = "92vh";
-    main.style.marginTop = "var(--nav-height)";
-}
+// navHide.onclick = () => {
+//     // navHide.style.display = "none";
+//     // navShow.style.display = "block";
+//     display(navHide, "none");
+//     display(navShow, "block");
+//     nav.style.width = "100vw";
+//     // dropdowns.forEach(item => item.style.display = "block");
+//     // logo.style.display = "block";
+//     dropdowns.forEach(item => display(item, "block"));
+//     display(logo, "block");
+//     sections.forEach(section => {
+//         section.style.margin = "0 auto 18vh auto";
+//         section.style.height = "82vh";
+//     });
+//     body.style.height = "92vh";
+//     body.style.marginTop = "var(--nav-height)";
+// }
 
 
 dropdowns.forEach(dropdown => {
