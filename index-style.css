@@ -81,7 +81,7 @@ nav a{
     display: none;
 }
 
-#logo{
+#logo, .logo-menu{
     color: var(--accent-color);
     align-self: center;
     justify-self: start;
