@@ -58,11 +58,11 @@ showSkills.forEach(function(showSkill){
     showSkill.onclick = () => {
         if(skill.style.display === "" || skill.style.display === "none"){
             display(skill, "block")
-            showSkill.innerHTML = "..less...";
+            showSkill.innerHTML = "less";
         }
         else{
             display(skill, "none");
-            showSkill.innerHTML = "..more...";
+            showSkill.innerHTML = "more";
         }
     };  
 });
