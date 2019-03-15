@@ -216,7 +216,7 @@ section {
 
 #headShot{
     grid-area: pic;
-    max-width: 430px;
+    max-width: 400px;
     border-radius: 20px;
     box-shadow: 0px 3px 20px 10px var(--foreground-color);
 }
@@ -247,9 +247,9 @@ section {
 #myProjects{
     display: grid;
     grid-template-columns: 80px 1fr 80px;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "leftArrow project rightArrow"
-                         "leftArrow project rightArrow";
+    grid-template-rows: 1fr 100px;
+    grid-template-areas: "a b c"
+                         "a b c";
     align-items: center;
     justify-content: center;
     grid-gap: 2vw;
@@ -274,34 +274,40 @@ section {
 }
 
 #left-arrow{
-    grid-area: leftArrow;
+    grid-area: a;
 }
 
 #right-arrow{
-    grid-area: rightArrow;
+    grid-area: c;
 }
 
 .project{
-    display:none;
+    display: none;
     box-sizing: content-box;
 }
 
 .project:nth-of-type(2){
+    grid-area: b;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "";
+    grid-template-rows: 1fr;
+    grid-template-areas: "d e"
+                         "d e";
+    align-items: center;
     margin-left: 10px;
     margin-right: 10px;
-    grid-area: project;
+   
 }
 
 #myProjects img{
     width: 100%;
+    grid-area: d;
+    align-self: center;
 }
 
 .project article{
     padding: 1em 2em;
+    grid-area: e;
 }
 
 /**************** CONTACT ME ****************/
@@ -323,4 +329,8 @@ section {
 #contact-middle{
     border-top: 4px solid var(--foreground-color);
     border-bottom: 4px solid var(--foreground-color);
+}
+
+.new-line{
+    display: none;
 }

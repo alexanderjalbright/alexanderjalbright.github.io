@@ -39,13 +39,27 @@
 
     #myProjects{
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: "project project"
-                             "leftArrow rightArrow";
+        grid-template-areas: "b b"
+                             "a c";
         justify-items: center;
     }
 
-    .project{
-        
+    .project:nth-of-type(2){
+        grid-template-columns: 1fr;
+        grid-template-areas: "d"
+                             "e";
+    }
+
+    #myProjects img{
+        justify-self: center;
+    }
+    
+    .project article{
+        justify-self: center;
+    }
+
+    .project article h2{
+        text-align: center;
     }
 }
 
@@ -102,5 +116,9 @@
     
     .devicon-git-plain{
         font-size: var(--devicon-font-size);
+    }
+
+    .new-line{
+        display: block;
     }
 }
