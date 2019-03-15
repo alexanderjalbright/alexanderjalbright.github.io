@@ -255,6 +255,7 @@ section {
     grid-gap: 2vw;
     padding-left: 20px;
     padding-right: 20px;
+    font-size: 24px;
 }
 
 #left-arrow, #right-arrow{
@@ -303,6 +304,12 @@ section {
     width: 100%;
     grid-area: d;
     align-self: center;
+    border: 5px solid var(--foreground-color);
+
+}
+#myProjects img:hover{
+    border: 5px solid var(--accent-color);
+
 }
 
 .project article{
@@ -317,6 +324,7 @@ section {
     grid-template-rows: 1fr 1fr 1fr;
     justify-content: center;
     align-items: space-around;
+    padding-top: 50px;
 }
 
 .contact{
@@ -333,4 +341,12 @@ section {
 
 .new-line{
     display: none;
+}
+
+.i-contact{
+    color: var(--accent-color);
+}
+
+.i-contact:hover{
+    transform: scale(1.2);
 }
