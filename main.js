@@ -38,8 +38,8 @@ leftArrow.onclick = () => {
     myProjects.insertBefore(movingProject,projects[0]);
 }
 
-var modal = document.querySelector("#modal");
-var close = document.querySelector("#close");
+const modal = document.querySelector("#modal");
+const close = document.querySelector("#close");
 logo.onclick = () => display(modal, "block");
 close.onclick = () => display(modal, "none");
 window.onclick = (event) => {
@@ -47,3 +47,22 @@ window.onclick = (event) => {
       display(modal,"none");
     }
 }
+
+
+const showSkills = document.querySelectorAll(".show-skill");
+showSkills.forEach(function(showSkill){
+    const description = showSkill.parentNode;
+    const article = description.parentNode;
+    const skill = article.querySelector(".skill");
+    
+    showSkill.onclick = () => {
+        if(skill.style.display === "" || skill.style.display === "none"){
+            display(skill, "block")
+            showSkill.innerHTML = "..less...";
+        }
+        else{
+            display(skill, "none");
+            showSkill.innerHTML = "..more...";
+        }
+    };  
+});

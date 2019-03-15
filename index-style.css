@@ -365,6 +365,14 @@ section {
     grid-area: e;
 }
 
+.skill{
+    display: none;
+}
+
+.show-skill{
+    display: inline;
+}
+
 /**************** CONTACT ME ****************/
 
 #contactMe{
