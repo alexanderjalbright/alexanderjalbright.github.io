@@ -1,7 +1,7 @@
 const logo = document.querySelector("#logo");
-const logoText = logo.querySelector("h2");
-logo.onmouseover = () => logoText.innerHTML = "alexander j albright";
-logo.onmouseout = () => logoText.innerHTML = "alexanderjalbright";
+// const logoText = logo.querySelector("h2");
+// logo.onmouseover = () => logoText.innerHTML = "alexander j albright";
+// logo.onmouseout = () => logoText.innerHTML = "alexanderjalbright";
 
 const display = (a,b) => {
     a.style.display = b;

@@ -99,6 +99,18 @@ nav a{
         align-self: center;
     -ms-grid-column-align: start;
         justify-self: start;
+    --logo-spaces: 0px;
+}
+
+#logo span{
+    font-size: var(--logo-spaces);
+    transition: 0.3s ease;
+}
+
+#logo:hover{
+    --logo-spaces: 24px;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .dropdown{
